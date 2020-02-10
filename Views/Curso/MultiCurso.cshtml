@@ -1,0 +1,21 @@
+﻿@* @model IEnumerable<Curso> *@
+
+@{
+    ViewData["Title"] = "Informacion Curso";
+    Layout = "Simple";
+}
+
+<div class="container mt-5">
+    <div class="card">
+
+        <div class="card-header">
+            <h1>@ViewData["Title"]</h1> 
+            @Html.ActionLink("Create",  "Create", new {} ,new { @class = "btn btn-success"})
+        </div>
+
+        <partial name="ListaCursos" ></partial>
+
+        <p class="card-footer mb-0">@ViewData["Fecha"]</p>
+
+    </div>
+</div>
